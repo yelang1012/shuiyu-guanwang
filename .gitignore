@@ -1,0 +1,7 @@
+# APK 文件不进 Git（体积大，用 SCP 单独上传）
+downloads/*.apk
+downloads/*.zip
+
+# 系统文件
+.DS_Store
+Thumbs.db

@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: shuiyu_web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./downloads:/usr/share/nginx/html/downloads
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
