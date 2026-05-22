@@ -38,57 +38,74 @@
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
   </div>
-  <div class="hero-content">
-    <div class="hero-badge">V1.0.0 · Android</div>
-    <h1 class="hero-title">水域<br><span class="hero-sub">水上运动轨迹记录</span></h1>
-    <p class="hero-desc">
-      专为桨板、皮划艇、帆板爱好者打造的专业运动记录工具。<br>
-      实时 GPS 轨迹、运动数据统计、路书规划、同步视频录制，<br>
-      让每一次水上探险都有迹可循。
-    </p>
-    <div class="hero-actions">
-      <a href="downloads/shuiyu-latest.apk" class="btn-primary" id="hero-download">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"/>
-          <polyline points="8 12 12 16 16 12"/>
-          <line x1="12" y1="8" x2="12" y2="16"/>
-        </svg>
-        下载 Android 版
-        <span class="btn-sub">免费下载 · V1.0.0</span>
-      </a>
-      <a href="#features" class="btn-secondary">了解功能 →</a>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">V1.0.0 · Android</div>
+      <h1 class="hero-title">水域<br><span class="hero-sub">水上运动轨迹记录</span></h1>
+      <p class="hero-desc">
+        专为桨板、皮划艇、帆板爱好者打造的专业运动记录工具。<br>
+        实时 GPS 轨迹、运动数据统计、路书规划、同步视频录制，<br>
+        让每一次水上探险都有迹可循。
+      </p>
+      <div class="hero-actions">
+        <a href="downloads/shuiyu-latest.apk" class="btn-primary" id="hero-download">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"/>
+            <polyline points="8 12 12 16 16 12"/>
+            <line x1="12" y1="8" x2="12" y2="16"/>
+          </svg>
+          下载 Android 版
+          <span class="btn-sub">免费下载 · V1.0.0</span>
+        </a>
+        <a href="#features" class="btn-secondary">了解功能 →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">0.8s</span><span class="stat-label">GPS 刷新间隔</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3 种</span><span class="stat-label">水上运动类型</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">息屏</span><span class="stat-label">持续轨迹追踪</span></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><span class="stat-num">0.8s</span><span class="stat-label">GPS 刷新间隔</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">3 种</span><span class="stat-label">水上运动类型</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">息屏</span><span class="stat-label">持续轨迹追踪</span></div>
-    </div>
-  </div>
-  <div class="hero-phone">
-    <div class="phone-frame">
-      <div class="phone-screen">
-        <div class="mock-map">
-          <div class="mock-track"></div>
-          <div class="mock-track2"></div>
-          <div class="mock-dot"></div>
-        </div>
-        <div class="mock-panel">
-          <div class="mock-metric">
-            <span class="mock-val">12.4</span>
-            <span class="mock-unit">km/h</span>
-            <span class="mock-lbl">当前速度</span>
+    <div class="hero-phone">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="mock-map">
+            <!-- GPS 轨迹线（SVG 直接渲染，不依赖 clip-path） -->
+            <svg width="100%" height="100%" viewBox="0 0 208 340" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0">
+              <!-- 地图网格背景 -->
+              <rect width="208" height="340" fill="#081422"/>
+              <line x1="0" y1="85" x2="208" y2="85" stroke="#0D2035" stroke-width="1"/>
+              <line x1="0" y1="170" x2="208" y2="170" stroke="#0D2035" stroke-width="1"/>
+              <line x1="0" y1="255" x2="208" y2="255" stroke="#0D2035" stroke-width="1"/>
+              <line x1="52" y1="0" x2="52" y2="340" stroke="#0D2035" stroke-width="1"/>
+              <line x1="104" y1="0" x2="104" y2="340" stroke="#0D2035" stroke-width="1"/>
+              <line x1="156" y1="0" x2="156" y2="340" stroke="#0D2035" stroke-width="1"/>
+              <!-- 轨迹路径（发光效果用两层：模糊底色 + 实线）-->
+              <path d="M30 280 C50 260 70 270 90 240 C110 210 120 220 140 190 C160 160 165 170 175 140 C180 125 178 110 170 95" stroke="#00D4FF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+              <path d="M30 280 C50 260 70 270 90 240 C110 210 120 220 140 190 C160 160 165 170 175 140 C180 125 178 110 170 95" stroke="#00D4FF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- 当前位置点（外圈 + 内点）-->
+              <circle cx="170" cy="95" r="10" fill="#00D4FF" opacity="0.2"/>
+              <circle cx="170" cy="95" r="5" fill="#00D4FF"/>
+              <circle cx="170" cy="95" r="5" fill="white" opacity="0.6"/>
+            </svg>
           </div>
-          <div class="mock-metric">
-            <span class="mock-val">3.82</span>
-            <span class="mock-unit">km</span>
-            <span class="mock-lbl">已划距离</span>
-          </div>
-          <div class="mock-metric">
-            <span class="mock-val">00:21</span>
-            <span class="mock-unit">min</span>
-            <span class="mock-lbl">运动时长</span>
+          <div class="mock-panel">
+            <div class="mock-metric">
+              <span class="mock-val">12.4</span>
+              <span class="mock-unit">km/h</span>
+              <span class="mock-lbl">当前速度</span>
+            </div>
+            <div class="mock-metric">
+              <span class="mock-val">3.82</span>
+              <span class="mock-unit">km</span>
+              <span class="mock-lbl">已划距离</span>
+            </div>
+            <div class="mock-metric">
+              <span class="mock-val">00:21</span>
+              <span class="mock-unit">min</span>
+              <span class="mock-lbl">运动时长</span>
+            </div>
           </div>
         </div>
       </div>

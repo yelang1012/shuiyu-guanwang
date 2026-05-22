@@ -109,8 +109,21 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 24px 60px;
+  padding: 100px 0 60px;
   overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 .hero-bg {
@@ -158,8 +171,8 @@ ul { list-style: none; }
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+  flex: 1;
+  min-width: 0;
   max-width: 560px;
 }
 
@@ -268,15 +281,11 @@ ul { list-style: none; }
 
 /* Phone mockup */
 .hero-phone {
-  position: absolute;
-  right: max(24px, calc(50% - 520px));
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  flex-shrink: 0;
 }
 
 .phone-frame {
-  width: 240px;
+  width: 220px;
   background: #0A1628;
   border-radius: 36px;
   padding: 16px;
@@ -298,51 +307,6 @@ ul { list-style: none; }
   background: #081422;
   position: relative;
   overflow: hidden;
-}
-
-.mock-track {
-  position: absolute;
-  inset: 0;
-  background: none;
-}
-
-.mock-track::after {
-  content: '';
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
-  box-shadow: 0 0 8px var(--accent);
-  clip-path: path('M0,0 C40,-20 80,-10 120,-30 C160,-50 180,-40 200,-55');
-  transform: rotate(-10deg) scaleX(1) translateY(-20px);
-}
-
-.mock-track2::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 16px var(--accent);
-  top: 45%;
-  right: 20%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.mock-dot {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 16px var(--accent);
-  top: 40%;
-  right: 18%;
-  animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -778,7 +742,9 @@ ul { list-style: none; }
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 900px) {
+  .hero-inner { flex-direction: column; align-items: flex-start; padding: 0 24px; }
   .hero-phone { display: none; }
+  .hero-content { max-width: 100%; }
   .feature-card--highlight { grid-column: span 1; }
   .sports-grid { grid-template-columns: 1fr; }
   .download-inner { grid-template-columns: 1fr; gap: 40px; }
