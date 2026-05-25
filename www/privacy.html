@@ -34,10 +34,10 @@
 <div class="doc-page">
   <a href="index.html" class="back-link">← 返回首页</a>
   <h1>隐私政策</h1>
-  <p class="doc-meta">最后更新时间：2026 年 5 月 22 日 &nbsp;·&nbsp; 水域 APP V1.0.0</p>
+  <p class="doc-meta">最后更新时间：2026 年 5 月 25 日 &nbsp;·&nbsp; 水域 APP V1.1.0</p>
 
   <div class="highlight-box">
-    <p>本隐私政策说明水域 APP（以下简称"水域"或"我们"）如何收集、使用和保护您的个人信息。请您在使用水域之前，仔细阅读本政策。<strong style="color:var(--text)">使用水域即表示您同意本隐私政策。</strong></p>
+    <p>本隐私政策说明水域 APP（以下简称"水域"或"我们"）如何收集、使用和保护您的个人信息。请您在使用水域之前，仔细阅读本政策并<strong style="color:var(--text)">在首次启动时通过弹窗明确授权同意</strong>。如您不同意，请停止使用本应用。</p>
   </div>
 
   <h2>一、我们收集的信息</h2>
@@ -62,12 +62,30 @@
   <p><strong>我们不会将您的个人信息出售或租借给任何第三方。</strong></p>
 
   <h2>三、第三方 SDK 与服务</h2>
-  <p>水域集成了以下第三方服务，请注意其各自的隐私政策：</p>
+  <p>水域集成了以下第三方服务，各服务可能独立收集信息，请关注其隐私政策：</p>
   <ul>
-    <li><strong>高德地图 SDK（AutoNavi）：</strong>提供地图显示和 GPS 定位服务。隐私政策：<a href="https://lbs.amap.com/pages/privacy" target="_blank" rel="noopener" style="color:var(--accent)">https://lbs.amap.com/pages/privacy</a></li>
-    <li><strong>彩云天气 API：</strong>提供实时天气与风速数据。数据请求仅传输位置坐标，不含个人身份信息。</li>
-    <li><strong>阿里云短信服务：</strong>用于发送 OTP 验证码，仅处理您的手机号码。</li>
-    <li><strong>微信开放平台：</strong>若您使用微信登录，将遵循微信隐私政策。</li>
+    <li>
+      <strong>高德地图 SDK（AutoNavi / 高德软件有限公司）：</strong>提供地图显示、GPS 定位及坐标转换服务。收集信息：设备位置、设备标识符。
+      隐私政策：<a href="https://lbs.amap.com/pages/privacy" target="_blank" rel="noopener" style="color:var(--accent)">https://lbs.amap.com/pages/privacy</a>
+    </li>
+    <li>
+      <strong>阿里云短信服务（阿里云计算有限公司）：</strong>发送登录 OTP 验证码。收集信息：手机号码（仅传输，不存储于阿里云）。
+      隐私政策：<a href="https://www.alibabacloud.com/zh/privacy-policy" target="_blank" rel="noopener" style="color:var(--accent)">https://www.alibabacloud.com/zh/privacy-policy</a>
+    </li>
+    <li>
+      <strong>彩云天气 API（北京彩云天气科技有限公司）：</strong>提供实时天气与风速数据。仅传输位置坐标（经纬度），不含个人身份信息。
+      隐私政策：<a href="https://caiyunapp.com/about/privacy.html" target="_blank" rel="noopener" style="color:var(--accent)">https://caiyunapp.com/about/privacy.html</a>
+    </li>
+    <li>
+      <strong>微信开放平台（深圳市腾讯计算机系统有限公司）：</strong>可选的微信快捷登录功能。若您使用微信登录，将按微信隐私政策处理数据。
+      隐私政策：<a href="https://weixin.qq.com/cgi-bin/readtemplate?t=weixin_agreement&s=privacy" target="_blank" rel="noopener" style="color:var(--accent)">查看微信隐私政策</a>
+    </li>
+    <li>
+      <strong>Android 系统定位服务（Google Geolocator）：</strong>通过 Android 系统 API 获取 GPS/北斗定位，不独立收集数据，遵循设备系统隐私设置。
+    </li>
+    <li>
+      <strong>WebView（系统内嵌浏览器）：</strong>用于展示 B 站等第三方视频内容及 H5 活动报名页，所访问页面遵循各自平台隐私政策。
+    </li>
   </ul>
 
   <h2>四、数据存储与安全</h2>
@@ -86,20 +104,30 @@
     <li><strong>FOREGROUND_SERVICE：</strong>保持定位服务在后台持续运行（息屏保活）。</li>
   </ul>
 
-  <h2>六、用户权利</h2>
+  <h2>六、用户权利与账号注销</h2>
   <p>您对自己的个人信息享有以下权利：</p>
   <ul>
-    <li><strong>访问权：</strong>您可在 APP 内查看您的账户信息和所有运动记录。</li>
-    <li><strong>删除权：</strong>您可在 APP 内删除单条运动记录，或申请注销账户以删除所有数据。</li>
-    <li><strong>撤回同意权：</strong>您可随时在手机设置中撤销水域的定位、相机等权限。</li>
-    <li><strong>数据可携权：</strong>如需导出您的运动数据，可联系我们获取帮助。</li>
+    <li><strong>访问权：</strong>您可在 APP"我的记录"页面查看所有运动数据，在"个人主页"查看账户信息。</li>
+    <li><strong>更正权：</strong>如发现信息有误，请联系客服协助更正。</li>
+    <li><strong>删除权：</strong>您可在 APP 内删除单条运动记录；如需删除全部数据，请注销账号。</li>
+    <li><strong>撤回同意权：</strong>您可随时在手机"设置 → 应用 → 水域"中撤销定位、相机等权限授权。撤销后相关功能将无法使用，但不影响已完成的数据处理。</li>
+    <li><strong>数据可携权：</strong>如需导出运动数据，请联系客服，我们将在 15 个工作日内提供。</li>
   </ul>
+  <div class="highlight-box" style="border-color:#e74c3c33">
+    <p style="font-weight:700;color:var(--text)">📋 账号注销与个人信息删除</p>
+    <p style="margin-top:8px">您可通过以下方式注销账号：</p>
+    <ol style="margin-top:8px;padding-left:20px">
+      <li><strong>APP 内自助注销（推荐）：</strong>进入"我的 → 账号安全 → 注销账号"，按提示完成二次确认，账号将<strong>立即停用</strong>，个人信息将在 <strong>15 个工作日内彻底清除</strong>。</li>
+      <li><strong>邮件申请：</strong>发送邮件至 <a href="mailto:simon@bdzn123.com" style="color:var(--accent)">simon@bdzn123.com</a>，注明"账号注销申请"及注册手机号，我们将在 15 个工作日内完成处理。</li>
+    </ol>
+    <p style="margin-top:8px;color:#e74c3c">注意：注销后个人信息（手机号、运动轨迹等）将被<strong>永久删除且无法恢复</strong>。</p>
+  </div>
 
   <h2>七、未成年人保护</h2>
   <p>水域 APP 不面向 14 周岁以下未成年人。若发现未成年人在未经监护人同意的情况下提供了个人信息，请联系我们，我们将及时删除相关数据。</p>
 
   <h2>八、政策变更</h2>
-  <p>我们可能不定期更新本隐私政策。重大变更将通过 APP 内通知或本页面的更新时间告知您。继续使用水域即视为您接受更新后的政策。</p>
+  <p>我们可能不定期更新本隐私政策。若发生影响您权益的重大变更，我们将通过 APP 内弹窗重新获取您的明确同意后方可继续提供服务。次要变更（如联系方式更新）将在本页面注明更新时间，建议您定期查阅。</p>
 
   <h2>九、联系我们</h2>
   <p>如对本隐私政策有任何疑问或需要行使您的权利，请通过以下方式联系我们：</p>
